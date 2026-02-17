@@ -1,0 +1,148 @@
+/* Gradient Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  margin: 0;
+  padding: 0 20px;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+p.description {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Top Skills Section */
+.skills-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.all-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 40px;
+}
+
+.all-skills span {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.2s, background 0.3s;
+  cursor: default;
+}
+
+.all-skills span:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Horizontal Tabs */
+.tab-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.headline {
+  padding: 15px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* Color-coded tabs */
+.headline.tech { background-color: rgba(52, 152, 219, 0.5);}
+.headline.business { background-color: rgba(46, 204, 113, 0.5);}
+.headline.creative { background-color: rgba(155, 89, 182, 0.5);}
+.headline.government { background-color: rgba(241, 196, 15, 0.5);}
+
+.headline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Content Box */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+  background: rgba(0,0,0,0.25);
+  margin-bottom: 15px;
+  border-radius: 12px;
+  padding: 0 20px;
+}
+
+.content.open {
+  max-height: 1500px;
+  padding: 20px;
+}
+
+/* Skills badges inside content */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.skills span {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.skills span:hover {
+  background: rgba(255,255,255,0.5);
+  transform: scale(1.1);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {font-size: 2rem;}
+  .headline {font-size: 1rem;}
+  li {font-size: 0.95rem;}
+  .skills span, .all-skills span {font-size: 0.8rem;}
+}
